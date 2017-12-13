@@ -37,7 +37,7 @@
                     <h2 class="pylst_title f-thide">{{name}}</h2>
                     <a class="pylst_auth f-thide" href="">
                         <div class="u-avatar">
-                            <img src="http://p1.music.126.net/R_PL5XsVKD0qydYBT0CX6g==/19149094509470996.webp?imageView&thumbnail=90x0&quality=75&tostatic=0&type=webp" alt="">
+                            <img :src="avatar" alt="">
                             <span class="ava-icon font-icon">&#xe607;</span>
                         </div>
                         昵称
@@ -85,7 +85,8 @@ export default {
       msg: this.$route.params.id,
       coverImgUrl: "",
       name: "",
-      playListSongs: null
+      playListSongs: null,
+      avatar : ""
     };
   },
   methods: {
@@ -101,6 +102,7 @@ export default {
         this.name = res.data.playlist.name;
         this.playListSongs = res.data.playlist.tracks;
         this.flag = true;
+        this.avatar = res.data.playlist.creator.avatarUrl
       })
       .catch(res => {
         console.log(res);
