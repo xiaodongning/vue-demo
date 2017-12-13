@@ -1,6 +1,6 @@
 # vue-neteasemusic
 
-> A Vue.js project
+> 参考github的项目仿ios 网易云音乐，作为vue的练手项目
 
 ## Build Setup
 
