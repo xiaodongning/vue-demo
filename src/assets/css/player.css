@@ -1,0 +1,310 @@
+.tool-icon {
+    display: flex;
+    padding: 0 20px 0 20px;
+}
+
+.icon-wrap {
+    flex: 1;
+    text-align: center;
+}
+
+.icon-wrap .font-icon {
+    color: hsla(0, 100%, 100%, 0.8);
+    font-size: 24px;
+}
+
+
+/*icon end*/
+
+.player {
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    height: 100vh;
+}
+
+.player-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-position: 50%;
+    background-size: cover;
+    filter: blur(10px);
+    transition: all 0.3s linear;
+    transform: scale(1.5);
+    transform-origin: center top;
+}
+
+.player-bg::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: " ";
+}
+
+@keyframes circling {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+.player-wrap {
+    padding-top: 60px;
+    width: 100%;
+}
+
+.player-disc {
+    position: relative;
+    z-index: 9999;
+    margin: 0 auto;
+    width: 248px;
+    height: 248px;
+}
+
+.player-disc::after {
+    position: absolute;
+    top: -83px;
+    left: 107px;
+    z-index: 5;
+    width: 90px;
+    height: 139px;
+    background-image: url(../images/play_needle_play.png);
+    background-size: contain;
+    content: " ";
+}
+
+.player-disc-album {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.player-disc-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 6;
+    text-align: center;
+    animation: circling 20s infinite linear;
+}
+
+.player-disc-img img {
+    width: 100%;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 320px) {
+    .player-disc {
+        width: 256px;
+        height: 256px;
+    }
+    .player-disc-img {
+        margin: -90px 0 0 -90px;
+        width: 180px;
+        height: 180px;
+    }
+    .player-wrap {
+        padding-top: 67px;
+    }
+    .player-disc::after {
+        top: -88px;
+        left: 116px;
+        width: 90px;
+        height: 139px;
+    }
+    .tool-icon {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .player-disc {
+        width: 296px;
+        height: 296px;
+    }
+    .player-disc-img {
+        margin: -100px 0 0 -100px;
+        width: 200px;
+        height: 200px;
+    }
+    .player-wrap {
+        padding-top: 67px;
+    }
+    .player-disc::after {
+        top: -95px;
+        left: 133px;
+        width: 110px;
+        height: 170px;
+    }
+    .tool-icon {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 414px) {
+    .player-disc {
+        width: 342px;
+        height: 342px;
+    }
+    .player-disc-img {
+        margin: -111px 0 0 -111px;
+        width: 222px;
+        height: 222px;
+    }
+    .player-wrap {
+        padding-top: 77px;
+    }
+    .player-disc::after {
+        top: -106px;
+        left: 150px;
+        width: 120px;
+        height: 186px;
+    }
+    .tool-icon {
+        margin-top: 100px;
+    }
+}
+
+.player-disc-album::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-image: url(../images/play_disc.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: " ";
+    animation: circling 20s infinite linear;
+}
+
+.player-disc-album::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    background-image: url(../images/disc_light.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: " ";
+}
+
+footer {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    min-width: 320px;
+    width: 100%;
+    height: 100px;
+}
+
+footer #playerProgress {
+    display: -webkit-box;
+}
+
+footer #playerProgress>div {
+    -webkit-box-flex: 1;
+}
+
+footer #playerProgress .time {
+    min-width: 80px;
+    max-width: 80px;
+    width: 80px;
+    color: #f9f5fa;
+    text-align: center;
+}
+
+footer #playerProgress .progressbar {
+    -webkit-box-flex: 3;
+    margin-top: 8px;
+    height: 3px;
+    background-color: #cfcbd0;
+}
+
+footer #playerProgress .progressbar .bar {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #fff;
+}
+
+footer #playerProgress .progressbar .bar:after {
+    position: absolute;
+    top: -3px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    border-radius: 10px;
+    background-color: #d33a31;
+    box-shadow: 0 0 1px 4px #fff;
+    content: " ";
+}
+
+footer #playerCtrl {
+    display: -webkit-box;
+    padding: 15px 0;
+    width: 100%;
+}
+
+footer #playerCtrl>div {
+    -webkit-box-flex: 1;
+}
+
+footer #playerCtrl>div .button {
+    display: block;
+    margin: auto;
+    width: 56px;
+    height: 56px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    background-position: center;
+    background-size: 100%;
+}
+
+footer #playerCtrl>div .button:active {
+    box-shadow: 0 0 1px 2px #f9f5fa;
+}
+
+footer #playerCtrl>div .button.loop {
+    background-image: url("../images/loop.png");
+}
+
+footer #playerCtrl>div .button.prev {
+    background-image: url("../images/prev.png");
+}
+
+footer #playerCtrl>div .button.play {
+    background-image: url("../images/play.png");
+}
+
+footer #playerCtrl>div .button.play.playing {
+    background-image: url("../images/pause.png");
+}
+
+footer #playerCtrl>div .button.next {
+    background-image: url("../images/next.png");
+}
+
+footer #playerCtrl>div .button.collect {
+    background-image: url("../images/list.png");
+}

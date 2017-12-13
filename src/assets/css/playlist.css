@@ -1,0 +1,274 @@
+.pylst_header {
+    position: relative;
+    padding: 30px 10px 10px 15px;
+    overflow: hidden;
+}
+.pylst_bg,.pylst_bg::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.pylst_bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    transform: scale(1.5);
+    filter: blur(20px);
+
+}
+.pylst_bg::after{
+    content:' ';
+    background:rgba(0, 0, 0, .25);
+}
+.pylst_wrap {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.pylst_fl {
+    position: relative;
+
+}
+@media screen and (min-width: 320px){
+    .pylst_fl {
+
+        width: 115px;
+        height: 115px;
+    }
+}
+@media screen and (min-width: 360px){
+    .pylst_fl {
+
+        width: 125px;
+        height: 125px;
+    }
+}
+@media screen and (min-width: 414px){
+    .pylst_fl {
+
+        width: 145px;
+        height: 145px;
+    }
+}
+.pylst_fl::after {
+    content: " ";
+    width: 100%;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, .2));
+    z-index: 2;
+}
+
+.pylst_fr {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-left: 16px;
+}
+
+.pylst_fl img {
+    width: 100%;
+    display: block;
+}
+
+.pylst_icon {
+    padding: 0 8px;
+    background: rgba(217, 48, 48, .8);
+    color: #fff;
+    height: 17px;
+    line-height: 17px;
+    font-size: 9px;
+    text-align: center;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+
+.pylst_fl i {
+    z-index: 3;
+}
+
+.pylst_title {
+    color: #fefefe;
+    font-size: 17px;
+    line-height: 1.3;
+    height: 44px;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+}
+
+.u-avatar {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.u-avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.pylst_auth {
+    display: block;
+    margin-top: 20px;
+    color: hsla(0, 0%, 100%, .7);
+}
+
+.ava-icon {
+    position: absolute;
+    right: 0;
+    bottom: -0;
+    color: #fff;
+    background: #FEBA3D;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.pylst_tool {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    padding-top: 10px;
+}
+
+.tool_item {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.item_icon {
+    font-size: 24px;
+}
+
+.item_text {
+    color: hsla(0, 10%, 100%, .7);
+}
+
+.dialog-photo {
+    position: absolute;
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; */
+}
+
+.dialog-photo .weui-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.dialog-photo .img-box {
+    position: absolute;
+    z-index: 2;
+    padding: 0 20px 80px 20px;
+    color: #fcfcfc;
+    top: 50px;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.dialog-photo .img-box::-webkit-scrollbar {
+    display: none;
+}
+
+.dialog-photo .img-box::after {
+    content: " ";
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, .7));
+    height: 136px;
+}
+
+.albums {
+    width: 50%;
+}
+
+.albums_title {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 15px 0;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.2);
+}
+
+.close {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 3;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.albums_desc {
+    margin-top: 15px;
+}
+
+.albums_desc pre {
+    text-align: left;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+.tag_wrap {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.tag_wrap span {
+    font-size: 13px;
+    padding: 2px 8px;
+    margin: 0 5px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+.btn_layout {
+    position: fixed;
+    bottom: 30px;
+    z-index: 3;
+    width: 100%;
+}
+
+.btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 15px;
+    padding: 6px 24px;
+    line-height: 1.4;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.icon-point {
+    font-size: 24px;
+    position: absolute;
+    right: 6px;
+    bottom: 0;
+}
