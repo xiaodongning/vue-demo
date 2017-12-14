@@ -1,8 +1,15 @@
 # vue-neteasemusic
 
-> 参考github的项目仿ios 网易云音乐，作为vue的练手项目
-
-## 效果图
+> 参考github的项目vue-music 仿ios网易云音乐，作为vue的练手项目
+- 项目的api来自github上的开源项目[NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)
+- 目前只在chrome调试模式测试过，建议使用chrome调试模式的浏览
+## 技术栈
+- HTML5+CSS3
+- Vue全家桶（Vue2.0，Vuex，Vue-Router，Vue-cli）
+- axios
+- ES6：箭头函数和扩展运算
+- [Vux框架](https://github.com/airyland/vux)
+## 效果图和功能
 ![首页](https://github.com/xiaodongning/vue-demo/blob/master/static/IMG_7199.png)
 ![歌单列表](https://github.com/xiaodongning/vue-demo/blob/master/static/IMG_7202.png)
 ![播放界面](https://github.com/xiaodongning/vue-demo/blob/master/static/IMG_7203.png)
